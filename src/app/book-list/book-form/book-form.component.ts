@@ -40,14 +40,14 @@ export class BookFormComponent implements OnInit {
     if (this.fileUrl && this.fileUrl !== '') {
       newBook.photo = this.fileUrl;
     }
-    // TODO Q6.2 à décommenter
+    // TODO Q8 à décommenter
     //  this.booksService.createNewBook(newBook);
     this.router.navigate(['/books']);
   }
 
   onUploadFile(file: File): void {
     this.fileIsUploading = true;
-    // TODO Q8 à décommenter
+    // TODO Q10 à décommenter
     //  this.booksService.uploadFile(file).then(
     //   (url: string) => {
     //     this.fileUrl = url;
