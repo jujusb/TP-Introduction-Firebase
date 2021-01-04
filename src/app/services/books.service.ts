@@ -49,9 +49,9 @@ export class BooksService {
 
   removeBook(book: Book): void {
     if (book.photo) {
-      // TODO Q11.1
+      // TODO Q12.1
       //  const storageRef = ...
-      // TODO Q11.2 à décomenter
+      // TODO Q12.2 à décomenter
       //  storageRef.delete().then(
       //    () => {
       //      console.log('Photo removed!');
@@ -78,7 +78,7 @@ export class BooksService {
     return new Promise(
       (resolve, reject) => {
         const almostUniqueFileName = Date.now().toString();
-        // TODO Q10.1
+        // TODO Q11.1
         //  const upload = firebase.storage().ref()
         //           .child(...).put(file);
         // upload.on(firebase.storage.TaskEvent.STATE_CHANGED,
@@ -90,7 +90,7 @@ export class BooksService {
         //     reject();
         //   },
         //   () => {
-        //     // TODO 10.2
+        //     // TODO 11.2
         //     //  resolve(...);
         //   }
         // );
