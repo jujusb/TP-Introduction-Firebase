@@ -41,20 +41,20 @@ export class BookFormComponent implements OnInit {
       newBook.photo = this.fileUrl;
     }
     // TODO Q8 à décommenter
-    //  this.booksService.createNewBook(newBook);
+     this.booksService.createNewBook(newBook);
     this.router.navigate(['/books']);
   }
 
   onUploadFile(file: File): void {
     this.fileIsUploading = true;
     // TODO Q10 à décommenter
-    //  this.booksService.uploadFile(file).then(
-    //   (url: string) => {
-    //     this.fileUrl = url;
-    //     this.fileIsUploading = false;
-    //     this.fileUploaded = true;
-    //   }
-    //  );
+     this.booksService.uploadFile(file).then(
+      (url: string) => {
+        this.fileUrl = url;
+        this.fileIsUploading = false;
+        this.fileUploaded = true;
+      }
+     );
   }
 
   detectFiles(event): void {
