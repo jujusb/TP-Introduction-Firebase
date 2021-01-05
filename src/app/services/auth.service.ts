@@ -27,10 +27,23 @@ export class AuthService {
 
   signInUser(email: string, password: string): any {
     // TODO Q2.1
+    return new Promise(
+      (resolve, reject) => {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(
+          () => {
+            resolve();
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+      }
+    );
   }
 
   signOutUser(): void {
     // TODO Q2.2
+    firebase.auth().signOut();
   }
 }
 
